@@ -10,7 +10,26 @@
     "created_at": "2021-11-16T09:10:28.700Z",
     "num_modification": 0,
     "last_modification": "2021-11-16T09:10:28.700Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Shanon",
+        "dates": [
+          {
+            "date": "2021-12-24",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "Dan",
+        "dates": [
+          {
+            "date": "2021-12-24",
+            "available": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "4fc07f0f9a37",
