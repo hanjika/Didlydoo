@@ -1,0 +1,88 @@
+[
+  {
+    "id": "ca2bca5e13d2",
+    "name": "Christmas",
+    "author": "Shanon",
+    "description": "Christmas begin",
+    "dates": [
+      "2021-12-24"
+    ],
+    "created_at": "2021-11-16T09:10:28.700Z",
+    "num_modification": 0,
+    "last_modification": "2021-11-16T09:10:28.700Z",
+    "attendees": []
+  },
+  {
+    "id": "4fc07f0f9a37",
+    "name": "Christmas",
+    "author": "Hanna",
+    "description": "Christmas is happening",
+    "dates": [
+      "2021-12-25"
+    ],
+    "created_at": "2021-11-16T08:53:19.145Z",
+    "num_modification": 0,
+    "last_modification": "2021-11-16T08:53:19.145Z",
+    "attendees": []
+  },
+  {
+    "id": "096185d83569",
+    "name": "Shanon's birthday",
+    "author": "Hanna",
+    "description": "Shanon is having a party",
+    "dates": [
+      "2021-11-28"
+    ],
+    "created_at": "2021-11-16T08:48:53.913Z",
+    "num_modification": 0,
+    "last_modification": "2021-11-16T08:48:53.913Z",
+    "attendees": []
+  },
+  {
+    "id": "f5b6564b5dc4",
+    "name": "My sweet 16",
+    "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
+    "author": "John Doe",
+    "dates": [
+      "2022-03-17",
+      "2022-03-18",
+      "2022-03-21",
+      "2022-03-22"
+    ],
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": false
+          },
+          {
+            "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Jean-Daniel",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": false
+          },
+          {
+            "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      }
+    ],
+    "created_at": "2021-11-15T00:00",
+    "num_modification": 3,
+    "last_modification": "2021-11-15T02:15"
+  }
+]
