@@ -80,3 +80,30 @@ article {
 .dates p {
 
 }
+
+.form-attend {
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-buttons {
+    width: 10vw;
+    margin: 0 2vw;
+}
+
+.radio-buttons label {
+    display: inline-block;
+    width: 10px;
+    padding: 5px;
+    border: solid 2px #ccc;
+    transition: all 0.3s;
+}
+
+.radio-buttons input[type="radio"] {
+    display: none;
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+    border: solid 2px blue;
+    background-color: cornflowerblue;
+}

@@ -1,3 +1,5 @@
+/*** ADD EVENT ***/
+
 const addEventBtn = document.querySelector('.add-new-event');
 addEventBtn.addEventListener('click', () => {
     const newEventModal = document.querySelector('.modal');
@@ -47,7 +49,7 @@ function removeAdditionalDates() {
     }
 }
 
-function addEvent(e) {
+function addEvent() {
     const form = document.querySelector('.event-form');
 
     const allDates = form.querySelectorAll('input[type="date"]');
@@ -75,4 +77,45 @@ function addEvent(e) {
     newEventModal.style.display = 'none';
 
     removeAdditionalDates() 
+}
+
+/*** ADD ATTENDANCE ***/
+
+function attendanceAdd(e) {
+    e.preventDefault();
+
+    let dates = [];
+
+    const form = e.target.parentNode;
+    const radioBtns = form.querySelectorAll('.radio-buttons');
+    for (const radio of radioBtns) {
+        const results = radio.getElementsByTagName('input');
+        const date = results[0].name;
+        let value;
+        if (results[0].checked) {
+            value = true;
+        } else if (results[1].checked) {
+            value = false;
+        }
+
+        const availableObj = {
+            date: date,
+            available: value
+        }
+        dates.push(availableObj);
+    }
+
+    const formData = {
+        name: form.name.value,
+        dates: dates
+    };
+
+    const id = e.target.id;
+    fetch('http://localhost:3000/api/events/' + id + '/attend', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
 }
