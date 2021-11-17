@@ -76,15 +76,12 @@ button.leave-modal {
 .event-form {
     margin-top: 5vh;
 }
-
 button, .delete-date {
     cursor: pointer;
 }
-
 .delete-date{
     padding: 5px;
 }
-
 article {
     margin: 30px;
     margin-top: 50px;
@@ -94,7 +91,6 @@ article {
     display: flex;
     gap: 50px;
 }
-
 .form-attend {
     display: flex;
     flex-direction: row;

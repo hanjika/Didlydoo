@@ -11,40 +11,33 @@
 <body>
     <header>
         <h1>Didlydoo</h1>
-    </header>
-    
+        <button class="add-event">Add Event</button>
+    </header> 
     <main>
-        <button class="add-new-event">Add new event</button>
-        <div class="modal">
-            <section class="create-event">
-                <div class="close-button-container">
-                  <button class="leave-modal">×</button>  
-                </div>
-                <form class="event-form">
-                    <label for="event">Event</label>
-                    <input type="text" name="name" id="event" placeholder="Name of Event" required>
-                    <label for="description">Description</label>
-                    <input type="text" name="description" id="description" placeholder="Description of Event" required>
-                    <label for="author">Organiser</label>
-                    <input type="text" name="author" id="author" placeholder="Your Name" required>
+         <form class="event-form">
+            <label for="event">Event</label>
+            <input type="text" name="eventName" id="event" placeholder="Name of Event">
+            <label for="description">Description</label>
+            <input type="text" name="eventDescription" id="description" placeholder="Description of Event">
 
-                    <div class="event-dates">
-                        <label for="date">Possible Dates</label>
-                        <input type="date" name="date" id="date">
-                    </div>
-                </form>
-
+            <div class="event-dates">
+                <label for="date">Possible Dates</label>
+                <input type="date" name="eventDate" id="date">
                 <button class="add-new-date-button">Add another date</button>
-                <button class="submit-form">Add Event</button>
-              </section>
-          </div>
+            </div>    
+            <input type="submit" value="Add Event">
+        </form>
 
-        <section class= "eventSection">
-            <h2>Events</h2>
+        <section class="event-display">
+            
+        <section>
+            <section class= "eventSection">
+            </section>
+            <section class= "guestSection">
+            </section>
         </section>
     </main>
-     
+    <script src= "js/hanna.js"></script>
     <script src="js/shanon.js"></script>
-    <script src="js/hanna.js"></script>
 </body>
 </html>
