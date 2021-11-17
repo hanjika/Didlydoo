@@ -2,7 +2,7 @@
   "name": "didlydoo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,5 +12,22 @@
     "joi": "^17.4.2",
     "lowdb": "^3.0.0",
     "nanoid": "^3.1.30"
-  }
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.0.1"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "rm -rf dist/* && parcel build --public-url ./",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanjika/Didlydoo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hanjika/Didlydoo/issues"
+  },
+  "homepage": "https://github.com/hanjika/Didlydoo#readme"
 }

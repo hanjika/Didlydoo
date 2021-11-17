@@ -2,6 +2,16 @@ body {
     font-family: sans-serif;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventSection {
+    margin: 0 5vw;
+}
+
 .modal {
     display: none;
     justify-content: center;
