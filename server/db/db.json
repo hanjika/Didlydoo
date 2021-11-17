@@ -1,63 +1,5 @@
 [
   {
-    "id": "ca2bca5e13d2",
-    "name": "Christmas",
-    "author": "Shanon",
-    "description": "Christmas begin",
-    "dates": [
-      "2021-12-24"
-    ],
-    "created_at": "2021-11-16T09:10:28.700Z",
-    "num_modification": 0,
-    "last_modification": "2021-11-16T09:10:28.700Z",
-    "attendees": [
-      {
-        "name": "Shanon",
-        "dates": [
-          {
-            "date": "2021-12-24",
-            "available": false
-          }
-        ]
-      },
-      {
-        "name": "Dan",
-        "dates": [
-          {
-            "date": "2021-12-24",
-            "available": false
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "4fc07f0f9a37",
-    "name": "Christmas",
-    "author": "Hanna",
-    "description": "Christmas is happening",
-    "dates": [
-      "2021-12-25"
-    ],
-    "created_at": "2021-11-16T08:53:19.145Z",
-    "num_modification": 0,
-    "last_modification": "2021-11-16T08:53:19.145Z",
-    "attendees": []
-  },
-  {
-    "id": "096185d83569",
-    "name": "Shanon's birthday",
-    "author": "Hanna",
-    "description": "Shanon is having a party",
-    "dates": [
-      "2021-11-28"
-    ],
-    "created_at": "2021-11-16T08:48:53.913Z",
-    "num_modification": 0,
-    "last_modification": "2021-11-16T08:48:53.913Z",
-    "attendees": []
-  },
-  {
     "id": "f5b6564b5dc4",
     "name": "My sweet 16",
     "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
@@ -103,5 +45,57 @@
     "created_at": "2021-11-15T00:00",
     "num_modification": 3,
     "last_modification": "2021-11-15T02:15"
+  },
+  {
+    "id": "38b643aeb883",
+    "name": "The big sale @ The Mall",
+    "description": "I want to buy stuff at the mall, but don't want to go alone who is up?",
+    "author": "Jean D'eau",
+    "dates": [
+      "2022-01-10",
+      "2022-02-10",
+      "2022-03-10",
+      "2022-03-11",
+      "2022-03-12"
+    ],
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Jane Doe",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": false
+          }
+        ]
+      }
+    ],
+    "created_at": "2021-11-13T14:00",
+    "num_modification": 0,
+    "last_modification": "2021-11-13T14:00"
   }
 ]
