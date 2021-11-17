@@ -22,7 +22,7 @@ fetch("http://localhost:3000/api/events/")
 .then(json => {
     console.log(json)
     for (const event of json) {
-        console.log(event)
+
         var article= document.createElement('article')
         eventSection.appendChild(article)
 
@@ -37,20 +37,22 @@ fetch("http://localhost:3000/api/events/")
         section.setAttribute('class', 'dates')
         article.appendChild(section)
         for (const date of event.dates){
-            console.log(date)
             var possibleDate= document.createElement('p')
             possibleDate.innerHTML= date.date
             section.appendChild(possibleDate)
             }
-
         for (const names of event.dates[0].attendees) {
+        console.log(names)
         var section2= document.createElement('section')
+        section2.setAttribute('class', 'guest')
         article.appendChild(section2)
         var guest= document.createElement('p')
         guest.innerHTML= names.name
         section2.appendChild(guest)
         }
-
     }
 })
+
+
+
 
