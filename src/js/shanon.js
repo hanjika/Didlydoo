@@ -42,9 +42,7 @@ fetch("http://localhost:3000/api/events/")
         guest.innerHTML= names.name
 
         guestList.appendChild(guest)
-
     }
-
 }
 })
 
