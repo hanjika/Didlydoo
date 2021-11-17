@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1>Didlydoo</h1>
-        <button class="add-event">Add Event</button>
+        <!-- <button class="add-event">Add Event</button>
         <form method= "post">
             <label for= "events">Events</label>
             <input class= "events" type= "date" name= "events" value= "">
@@ -20,38 +20,41 @@
             <label for= "guests">Guests</label>
             <input class= "guests" type= "text" name= "guests" value= "">
             <input class= "submit2" type="button" value="Add">
-        </form>
+        </form> -->
     </header>
     
     <main>
-        <!-- <form class="event-form">
-            <label for="event">Event</label>
-            <input type="text" name="eventName" id="event" placeholder="Name of Event">
-            <label for="description">Description</label>
-            <input type="text" name="eventDescription" id="description" placeholder="Description of Event">
+        <button class="add-new-event">Add new event</button>
+        <div class="modal">
+            <section class="create-event">
+                <div class="close-button-container">
+                  <button class="leave-modal">×</button>  
+                </div>
+                <form class="event-form" method="post">
+                    <label for="event">Event</label>
+                    <input type="text" name="name" id="event" placeholder="Name of Event" required>
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="description" placeholder="Description of Event" required>
+                    <label for="author">Organiser</label>
+                    <input type="text" name="author" id="author" placeholder="Your Name" required>
 
-            <div class="event-dates">
-                <label for="date">Possible Dates</label>
-                <input type="date" name="eventDate" id="date">
+                    <div class="event-dates">
+                        <label for="date">Possible Dates</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                </form>
+
                 <button class="add-new-date-button">Add another date</button>
-            </div>
-            
-            <input type="submit" value="Add Event">
-        </form> -->
+                <button class="submit-form">Add Event</button>
+            </section>
+        </div>
 
-        <section class="event-display">
-            
-        <section>
-            <section class= "eventSection">
-                <h2>Events</h2>
-            </section>
-            <section class= "guestSection">
-                <h2>Guests</h2>
-            </section>
+        <section class= "eventSection">
+            <h2>Events</h2>
         </section>
     </main>
 
-    <script src="js/index.js"></script>
+    <script src="js/hanna.js"></script>
     <script src="js/shanon.js"></script>
 </body>
 </html>
