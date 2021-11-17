@@ -1,5 +1,55 @@
 [
   {
+    "id": "e8bee974667c",
+    "name": "Jean-René's Bar-Mitzvah",
+    "author": "Jean-René",
+    "description": "Come feast with me, there will be free kosher food",
+    "dates": [
+      "2024-12-11",
+      "2025-01-07"
+    ],
+    "created_at": "2021-11-17T08:58:03.667Z",
+    "num_modification": 0,
+    "last_modification": "2021-11-17T08:58:03.667Z",
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2025-01-07",
+            "available": true
+          },
+          {
+            "date": "2024-12-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Barbara",
+        "dates": [
+          {
+            "date": "2025-01-07",
+            "available": false
+          },
+          {
+            "date": "2024-12-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Kevin Spicy",
+        "dates": [
+          {
+            "date": "2024-12-11",
+            "available": false
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "f5b6564b5dc4",
     "name": "My sweet 16",
     "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",

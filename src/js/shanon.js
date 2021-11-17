@@ -17,10 +17,40 @@ submit2.onclick= () => {
     guestSection.appendChild(guestName)
 }
 
-let eventArray= []
 fetch("http://localhost:3000/api/events/")
 .then(response => response.json())
 .then(json => {
-eventArray.push(json)
-    console.log(json.name)
+    console.log(json)
+    for (const event of json) {
+        console.log(event)
+        var article= document.createElement('article')
+        eventSection.appendChild(article)
+
+        var name= document.createElement('h3')
+        name.innerHTML= event.name
+        article.appendChild(name)
+
+        var description= document.createElement('p')
+        description.innerHTML= event.description
+        article.appendChild(description)
+        var section= document.createElement('section')
+        section.setAttribute('class', 'dates')
+        article.appendChild(section)
+        for (const date of event.dates){
+            console.log(date)
+            var possibleDate= document.createElement('p')
+            possibleDate.innerHTML= date.date
+            section.appendChild(possibleDate)
+            }
+
+        for (const names of event.dates[0].attendees) {
+        var section2= document.createElement('section')
+        article.appendChild(section2)
+        var guest= document.createElement('p')
+        guest.innerHTML= names.name
+        section2.appendChild(guest)
+        }
+
+    }
 })
+

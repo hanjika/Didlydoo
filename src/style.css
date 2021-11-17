@@ -1,13 +1,12 @@
-.event-dates {
+article {
+    margin: 30px;
+    margin-top: 50px;
+}
+.dates {
+    margin-left: 150px;
     display: flex;
-    flex-direction: column;
-    width: 25vw;
+    gap: 50px;
 }
+.dates p {
 
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td, .add-details-to-event input {
-    width: 15vw;
 }
