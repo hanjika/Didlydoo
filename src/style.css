@@ -64,10 +64,15 @@ button, .delete-date {
     padding: 5px;
 }
 
-table, th, td {
-    border: 1px solid black;
+article {
+    margin: 30px;
+    margin-top: 50px;
 }
+.dates {
+    margin-left: 150px;
+    display: flex;
+    gap: 50px;
+}
+.dates p {
 
-th, td, .add-details-to-event input {
-    width: 15vw;
 }
