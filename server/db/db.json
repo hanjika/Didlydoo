@@ -1,5 +1,19 @@
 [
   {
+    "id": "2cdfb267273a",
+    "name": "party",
+    "author": "Hanna",
+    "description": "Dance",
+    "dates": [
+      "2021-11-19",
+      "2021-11-23"
+    ],
+    "created_at": "2021-11-17T12:28:47.616Z",
+    "num_modification": 0,
+    "last_modification": "2021-11-17T12:28:47.616Z",
+    "attendees": []
+  },
+  {
     "id": "e8bee974667c",
     "name": "Jean-René's Bar-Mitzvah",
     "author": "Jean-René",
