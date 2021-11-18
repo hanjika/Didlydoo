@@ -75,7 +75,7 @@ fetch("http://localhost:3000/api/events/")
                 var available= document.createElement('p')
                 available.innerHTML= x.available
                 sectionDate.appendChild(available) 
-            }
+            }   
         }
 
         /* To add attendance to existing events */
@@ -130,7 +130,7 @@ fetch("http://localhost:3000/api/events/")
 
         attendanceForm.appendChild(addAttendance);
         article.appendChild(attendanceForm);
-    }
+}
 })
 
 
