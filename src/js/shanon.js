@@ -1,6 +1,5 @@
 const main= document.querySelector('main')
 const eventSection= document.querySelector('.eventSection')
-const guestSection= document.querySelector('.guestSection')
 const inputEvent= document.querySelector('.events')
 const inputGuest= document.querySelector('.guests')
 
@@ -46,6 +45,7 @@ fetch("http://localhost:3000/api/events/")
         author.innerHTML= 'Posted by ' + event.author;
         article.appendChild(author);
 
+        //dates
         var section= document.createElement('section')
         section.setAttribute('class', 'dates')
         article.appendChild(section) 
@@ -57,9 +57,9 @@ fetch("http://localhost:3000/api/events/")
         var emptyP = document.createElement('p');
         guestList.appendChild(emptyP);
         for (const names of event.dates[0].attendees) {
+            //name of guests
             var guest= document.createElement('p')
             guest.innerHTML= names.name
-
             guestList.appendChild(guest)
         }
 
@@ -72,7 +72,14 @@ fetch("http://localhost:3000/api/events/")
 
             for (const x of date.attendees) {
                 var available= document.createElement('p')
-                available.innerHTML= x.available
+                if (x.available == true) {
+                    available.innerHTML = "V"
+                    available.classList.add('true')
+                }
+                if (x.available == false) {
+                    available.innerHTML= "X"
+                    available.classList.add("false")
+                }
                 sectionDate.appendChild(available) 
             }   
         }
@@ -90,6 +97,7 @@ fetch("http://localhost:3000/api/events/")
 
         attendanceForm.appendChild(attendeeName);
         for (const date of event.dates) {
+            
             const radioBtns = document.createElement('div');
             radioBtns.classList.add('radio-buttons');
 
@@ -102,7 +110,7 @@ fetch("http://localhost:3000/api/events/")
 
             const availableLabel = document.createElement('label');
             availableLabel.setAttribute('for', 'yes' + date.date + event.id);
-            availableLabel.innerText = "Y";
+            availableLabel.innerText = "V";
 
             const unavailable = document.createElement('input');
             unavailable.setAttribute('type', 'radio');
@@ -112,7 +120,7 @@ fetch("http://localhost:3000/api/events/")
 
             const unavailableLabel = document.createElement('label');
             unavailableLabel.setAttribute('for', 'no' + date.date + event.id);
-            unavailableLabel.innerText = "N";
+            unavailableLabel.innerText = "X";
 
             radioBtns.appendChild(available);
             radioBtns.appendChild(availableLabel);

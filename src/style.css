@@ -27,8 +27,8 @@ article {
 }
 body {
     font-family: sans-serif;
+    border: 1px ridge black;
 }
-
 header {
     color: var(--primary-color);
     font-size: 30px;
@@ -36,7 +36,6 @@ header {
     flex-direction: column;
     align-items: center;
 }
-
 header button {
     width: 20vw;
     height: 10vh;
@@ -79,7 +78,17 @@ section > p, .form-attend > *{
 .eventSection {
     margin: 0 5vw;
 }
-
+.add-new-event {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+section > p, .form-attend input{
+    width: 10vw;
+}
+section > p:not(:first-child) {
+    text-align: center;
+}
 .modal {
     display: none;
     justify-content: center;
@@ -93,30 +102,25 @@ section > p, .form-attend > *{
     overflow: auto;
     background-color: rgba(95, 95, 95, 0.7);
 }
-
 .create-event {
     width: 50vw;
     height: auto;
     margin-bottom: 10%;
     background-color: white;
 }
-
 .create-event, .event-form, .event-dates {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .event-form, .event-dates {
     justify-content: center;
 }
-
 .close-button-container {
     width: 50vw;
     display: flex;
     justify-content: flex-end;
 }
-
 button.leave-modal {
     position: fixed;
     border: none;
@@ -125,41 +129,31 @@ button.leave-modal {
     padding: 0 20px;
     font-size: 30px;
 }
-
 .create-event button {
     margin: 2vh 0;
 }
-
 .event-form input {
     margin-bottom: 2vh;
 }
-
 .event-form {
     margin-top: 5vh;
 }
-
-button, .delete-date, .radio-buttons label {
+button, .delete-date {
     cursor: pointer;
 }
-
 .delete-date{
     padding: 5px;
 }
-
 .form-attend {
     display: flex;
     flex-direction: row;
 }
-
-form.form-attend > * {
-    margin: 0;
-}
-
 .radio-buttons {
     display: flex;
     justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
-
 .radio-buttons label {
     background-color: var(--text-color);
     color: white;
@@ -167,14 +161,12 @@ form.form-attend > * {
     width: 20px;
     height: 20px;
     text-align: center;
+    display: inline-block;
+    width: 10px;
+    padding: 5px;
+    border: solid 2px #ccc;
     transition: all 0.3s;
 }
-
-.radio-buttons label:hover {
-    background-color: black;
-    color: white;
-}
-
 .radio-buttons input[type="radio"] {
     display: none;
 }
@@ -185,4 +177,33 @@ form.form-attend > * {
 
 .radio-buttons input[value="no"]:checked + label {
     background-color: red;
+ }
+.radio-buttons input[type="radio"]:checked + label {
+    border: solid 2px blue;
+};
+.eventSection {
+    margin-left: 50px;
+}
+.dates {
+    text-align: center;
+    display: flex;
+}
+.dates section {
+    display: flex;
+    flex-direction: column;
+}
+.dates section p {
+    margin: 0px;
+    border: 1px ridge black;
+    height: 25px;
+    text-align: center;
+}
+.guest {
+    display: flex;
+}
+.true {
+    color: green;
+}
+.false {
+    color:red;
 }

@@ -1,7 +1,7 @@
 [
   {
     "id": "3a49f239593a",
-    "name": "Shanon's birthday",
+    "name": "Shanon's pretend birthday",
     "author": "Hanna",
     "description": "A birthday party for Shanon",
     "dates": [
@@ -77,6 +77,32 @@
           {
             "date": "2024-12-11",
             "available": false
+          }
+        ]
+      },
+      {
+        "name": "Shanon",
+        "dates": [
+          {
+            "date": "2024-12-11",
+            "available": false
+          },
+          {
+            "date": "2025-01-07",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Hanna",
+        "dates": [
+          {
+            "date": "2024-12-11",
+            "available": false
+          },
+          {
+            "date": "2025-01-07",
+            "available": true
           }
         ]
       }
