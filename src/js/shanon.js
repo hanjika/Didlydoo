@@ -1,6 +1,5 @@
 const main= document.querySelector('main')
 const eventSection= document.querySelector('.eventSection')
-const guestSection= document.querySelector('.guestSection')
 const inputEvent= document.querySelector('.events')
 const inputGuest= document.querySelector('.guests')
 

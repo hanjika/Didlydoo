@@ -19,7 +19,6 @@ addDateBtn.addEventListener('click', addAdditionalDate);
 const submitFormBtn = document.querySelector('.submit-form');
 submitFormBtn.addEventListener('click', addEvent);
 
-
 function addAdditionalDate() {
     const parentDiv = document.querySelector('.event-dates');
 
