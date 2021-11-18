@@ -13,6 +13,12 @@ article {
     border-radius: 25px;
     margin-top: 50px;
 }
+
+article p,
+h3 {
+    color: var(--text-color);
+}
+
 .dates {
     display: flex;
     text-align: center;
@@ -21,13 +27,18 @@ article {
     display: flex;
     flex-direction: column;
 }
-.guest {
-    display: flex;
-    gap : 30px;
-}
+
 body {
-    font-family: sans-serif;
-    border: 1px ridge black;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    color: var(--text-color);
 }
 
 header {
@@ -38,15 +49,20 @@ header {
     align-items: center;
 }
 
+h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--text-color);
+}
+
 header button {
     width: 20vw;
     height: 10vh;
-    background-color: var(--primary-color);
-    color: black;
 }
 
-button, .form-attend > button {
+button, 
+.form-attend > button {
     text-transform: capitalize;
+    font-weight: bold;
     width: 10vw;
     border: none;
     border-radius: 25px;
@@ -60,18 +76,38 @@ button:hover {
     color: white;
 }
 
+button.attendance-button {
+    font-size: 20px;
+    width: 5vh;
+    height: 5vh;
+}
+
 .event-title {
     display: flex;
     justify-content: space-between;
 }
 
+.title, 
+input[name="modifyEvent"] {
+    width: 50vw;
+    margin: 0;
+}
+
+.edit-event-button,
+.delete-event-button,
+.attendance-button {
+    height: 8vh;
+}
 
 section > p, .form-attend > *, .radio-buttons {
     width: 15vw;
     height: 5vh;
+    top: 10px;
+    vertical-align: middle;
 }
 
-section > p, .form-attend > *{
+section > p, 
+.form-attend > *{
     margin: 0;
     padding: 0;
     color: var(--text-color);
@@ -93,22 +129,41 @@ section > p, .form-attend > *{
     height: 100%;
     overflow: auto;
     background-color: rgba(95, 95, 95, 0.7);
+
+}
+
+.leave-modal {
+    width: 5vw;
+    padding-right: 0;
+    color: var(--text-color);
+}
+
+.leave-modal:hover {
+    color: var(--highlight-color);
 }
 
 .create-event {
     width: 50vw;
     height: auto;
     margin-bottom: 10%;
-    background-color: white;
+    background-color: var(--primary-color);
+    border-radius: 25px;
 }
 
-.create-event, .event-form, .event-dates {
+input[type="text"], input[type="date"] {
+    border: 1px solid var(--secondary-color);
+}
+
+.create-event, 
+.event-form, 
+.event-dates {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.event-form, .event-dates {
+.event-form, 
+.event-dates {
     justify-content: center;
 }
 
@@ -129,6 +184,8 @@ button.leave-modal {
 
 .create-event button {
     margin: 2vh 0;
+    width: 20vh;
+    height: 5vh;
 }
 
 .event-form input {
@@ -139,7 +196,8 @@ button.leave-modal {
     margin-top: 5vh;
 }
 
-button, .delete-date, .radio-buttons label {
+button, .delete-date, 
+.radio-buttons label {
     cursor: pointer;
 }
 
@@ -150,6 +208,7 @@ button, .delete-date, .radio-buttons label {
 .form-attend {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 form.form-attend > * {
@@ -159,14 +218,15 @@ form.form-attend > * {
 .radio-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .radio-buttons label {
-    background-color: var(--text-color);
+    background-color: var(--secondary-color);
     color: white;
     margin: 0 5px;
-    width: 20px;
-    height: 20px;
+    width: 4vh;
+    height: 4vh;
     text-align: center;
     transition: all 0.3s;
 }
@@ -188,15 +248,28 @@ form.form-attend > * {
     background-color: red;
 }
 
-.add-new-event {
-    position: absolute;
-    top: 50px;
-    right: 100px;
+input[name="modifyEvent"], 
+input[name="modifyDescription"], 
+input[name="modifyAuthor"] {
+    margin-bottom: 1em;
+    margin-right: 1em;
+    height: 5vh;
 }
 
-.eventSection {
-    margin-left: 50px;
+input[name="modifyEvent"], 
+input[name="modifyDescription"], 
+input[name="modifyAuthor"],
+.form-attend > input[name="name"] {
+    padding-left: 2vw;
 }
+
+.form-attend > input[name="name"] {
+    width: 13vw;
+}
+.add-new-event {
+    text-transform: uppercase;
+} 
+
 .dates {
     text-align: center;
     display: flex;
@@ -207,7 +280,6 @@ form.form-attend > * {
 }
 .dates section p {
     margin: 0px;
-    border: 1px ridge black;
     height: 25px;
     text-align: center;
 }
@@ -219,3 +291,16 @@ form.form-attend > * {
 }
 .false {
     color:red;
+}
+
+.guests p:first-child, 
+.date-info p:first-child {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.guests > p {
+    display: flex;
+    padding-left: 2vw;
+    width: 13vw;
+}
