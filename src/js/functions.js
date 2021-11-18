@@ -64,6 +64,14 @@ function addEvent() {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData)
+    }).then(response => response.json())
+    .then(result => {
+        if (result[0].type === 'string.empty') {
+            alert('All input fields must be completed to add an event');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
     });
 
     const newEventModal = document.querySelector('.modal');
@@ -110,14 +118,22 @@ function attendanceAdd(e) {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData)
+    }).then(response => response.json())
+    .then(result => {
+        if (result[0].type === 'string.empty') {
+            alert('All input fields must be completed to add an attendance');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
     });
 }
 
 /*** EDIT EVENT ***/
 
 function editEvent(e) {
-    console.log(e.target);
     e.target.innerText = 'Finish edit';
+
     const id = e.target.id;
     let article;
 
@@ -127,40 +143,68 @@ function editEvent(e) {
             article = anArticle;
         }
     }
-    console.log(article);
 
     const getNewTitle = document.createElement('input');
     getNewTitle.setAttribute('type', 'text');
+    getNewTitle.setAttribute('name', 'modifyEvent');
     getNewTitle.setAttribute('placeholder', 'Name of event');
 
     const getNewDes = document.createElement('input');
     getNewDes.setAttribute('type', 'text');
+    getNewDes.setAttribute('name', 'modifyDescription');
     getNewDes.setAttribute('placeholder', 'Description');
 
     const getNewAuthor = document.createElement('input');
     getNewAuthor.setAttribute('type', 'text');
+    getNewAuthor.setAttribute('name', 'modifyAuthor');
     getNewAuthor.setAttribute('placeholder', 'Your name');
-
 
     article.querySelector('.title').replaceWith(getNewTitle);
     article.querySelector('.description').replaceWith(getNewDes);
     article.querySelector('.author').replaceWith(getNewAuthor);
 
     e.target.removeEventListener('click', editEvent);
-    e.target.addEventListener('click', finishEdit);
+    e.target.addEventListener('click', () => {
+        finishEdit(e, article, id)
+    });
 }
 
-function finishEdit(e) {
-    e.target.innerText = 'Edit event';
+function finishEdit(e, article, id) {
+    const newEvent = article.querySelector('input[name="modifyEvent"]').value;
+    const newDescription = article.querySelector('input[name="modifyDescription"]').value;
+    const newAuthor = article.querySelector('input[name="modifyAuthor"]').value;
 
-    e.target.removeEventListener('click', finishEdit);
-    e.target.addEventListener('click', editEvent);
+    const editedData = {
+        name: newEvent,
+        author: newAuthor,
+        description: newDescription
+    };
+
+    fetch('http://localhost:3000/api/events/' + id, {
+      method: 'PATCH',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(editedData)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result[0].type === 'string.empty') {
+            alert('All input fields must be completed to finish editing the event');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+    e.target.removeEventListener('click', () => {
+        finishEdit(e, article, id)
+    });
 }
 
 /*** DELETE EVENT ***/
 
 function deleteEvent(e) {
-    console.log(e.target);
     const id = e.target.id;
 
     fetch('http://localhost:3000/api/events/' + id, {

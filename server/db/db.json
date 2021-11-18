@@ -1,5 +1,38 @@
 [
   {
+    "id": "3a49f239593a",
+    "name": "Shanon's pretend birthday",
+    "author": "Hanna",
+    "description": "A birthday party for Shanon",
+    "dates": [
+      "2021-11-26",
+      "2021-11-28",
+      "2021-11-29"
+    ],
+    "created_at": "2021-11-18T08:55:34.096Z",
+    "num_modification": 0,
+    "last_modification": "2021-11-18T08:55:34.096Z",
+    "attendees": [
+      {
+        "name": "Hanna",
+        "dates": [
+          {
+            "date": "2021-11-26",
+            "available": true
+          },
+          {
+            "date": "2021-11-28",
+            "available": false
+          },
+          {
+            "date": "2021-11-29",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "e8bee974667c",
     "name": "Jean-René's Bar-Mitzvah",
     "author": "Jean-René",

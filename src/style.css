@@ -1,11 +1,82 @@
+:root {
+    --primary-color: #a8dadc;
+    --secondary-color: #457b9d;
+    --text-color: #1d3557;
+    --highlight-color: #e63946;
+    --background-color: #f1faee;
+  }
+
+article {
+    background-color: var(--primary-color);
+    width: 75vw;
+    padding: 5vw;
+    border-radius: 25px;
+    margin-top: 50px;
+}
+.dates {
+    display: flex;
+    text-align: center;
+}
+.dates section {
+    display: flex;
+    flex-direction: column;
+}
+.guest {
+    display: flex;
+    gap : 30px;
+}
 body {
     font-family: sans-serif;
     border: 1px ridge black;
 }
 header {
+    color: var(--primary-color);
+    font-size: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+header button {
+    width: 20vw;
+    height: 10vh;
+    background-color: var(--primary-color);
+    color: black;
+}
+
+button, .form-attend > button {
+    text-transform: capitalize;
+    width: 10vw;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--text-color);
+    color: white;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.event-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+section > p, .form-attend > *, .radio-buttons {
+    width: 15vw;
+    height: 5vh;
+}
+
+section > p, .form-attend > *{
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+} 
+
+.eventSection {
+    margin: 0 5vw;
 }
 .add-new-event {
     position: absolute;
@@ -84,6 +155,12 @@ button, .delete-date {
     margin-right: 50px;
 }
 .radio-buttons label {
+    background-color: var(--text-color);
+    color: white;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
     display: inline-block;
     width: 10px;
     padding: 5px;
@@ -93,10 +170,17 @@ button, .delete-date {
 .radio-buttons input[type="radio"] {
     display: none;
 }
+
+.radio-buttons input[value="yes"]:checked + label {
+    background-color: green;
+}
+
+.radio-buttons input[value="no"]:checked + label {
+    background-color: red;
+ }
 .radio-buttons input[type="radio"]:checked + label {
     border: solid 2px blue;
-    background-color: cornflowerblue;
-}
+};
 .eventSection {
     margin-left: 50px;
 }
