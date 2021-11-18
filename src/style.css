@@ -1,5 +1,16 @@
+:root {
+    --primary-color: #a8dadc;
+    --secondary-color: #457b9d;
+    --text-color: #1d3557;
+    --highlight-color: #e63946;
+    --background-color: #f1faee;
+  }
+
 article {
-    margin: 30px;
+    background-color: var(--primary-color);
+    width: 75vw;
+    padding: 5vw;
+    border-radius: 25px;
     margin-top: 50px;
 }
 .dates {
@@ -19,9 +30,33 @@ body {
 }
 
 header {
+    color: var(--primary-color);
+    font-size: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+header button {
+    width: 20vw;
+    height: 10vh;
+    background-color: var(--primary-color);
+    color: black;
+}
+
+button, .form-attend > button {
+    text-transform: capitalize;
+    width: 10vw;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--text-color);
+    color: white;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: var(--highlight-color);
+    color: white;
 }
 
 .event-title {
@@ -38,8 +73,8 @@ section > p, .form-attend > *, .radio-buttons {
 section > p, .form-attend > *{
     margin: 0;
     padding: 0;
-    /* border: solid 1px black; */
-}
+    color: var(--text-color);
+} 
 
 .eventSection {
     margin: 0 5vw;
@@ -126,12 +161,12 @@ form.form-attend > * {
 }
 
 .radio-buttons label {
-    background-color: cornflowerblue;;
+    background-color: var(--text-color);
+    color: white;
     margin: 0 5px;
     width: 20px;
     height: 20px;
     text-align: center;
-    border-radius: 50%;
     transition: all 0.3s;
 }
 
@@ -145,9 +180,9 @@ form.form-attend > * {
 }
 
 .radio-buttons input[value="yes"]:checked + label {
-    background-color: palegreen;
+    background-color: green;
 }
 
 .radio-buttons input[value="no"]:checked + label {
-    background-color: palevioletred;
+    background-color: red;
 }

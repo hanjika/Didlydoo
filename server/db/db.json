@@ -1,53 +1,32 @@
 [
   {
-    "id": "2cdfb267273a",
-    "name": "party",
+    "id": "3a49f239593a",
+    "name": "Shanon's birthday",
     "author": "Hanna",
-    "description": "Dance",
+    "description": "A birthday party for Shanon",
     "dates": [
-      "2021-11-19",
-      "2021-11-23"
+      "2021-11-26",
+      "2021-11-28",
+      "2021-11-29"
     ],
-    "created_at": "2021-11-17T12:28:47.616Z",
+    "created_at": "2021-11-18T08:55:34.096Z",
     "num_modification": 0,
-    "last_modification": "2021-11-17T12:28:47.616Z",
+    "last_modification": "2021-11-18T08:55:34.096Z",
     "attendees": [
       {
-        "name": "Bob",
+        "name": "Hanna",
         "dates": [
           {
-            "date": "2021-11-19",
-            "available": false
-          },
-          {
-            "date": "2021-11-23",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "David",
-        "dates": [
-          {
-            "date": "2021-11-19",
+            "date": "2021-11-26",
             "available": true
           },
           {
-            "date": "2021-11-23",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "Emma",
-        "dates": [
-          {
-            "date": "2021-11-19",
+            "date": "2021-11-28",
             "available": false
           },
           {
-            "date": "2021-11-23",
-            "available": false
+            "date": "2021-11-29",
+            "available": true
           }
         ]
       }

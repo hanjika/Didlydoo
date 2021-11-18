@@ -71,7 +71,6 @@ fetch("http://localhost:3000/api/events/")
             sectionDate.appendChild(possibleDate) 
 
             for (const x of date.attendees) {
-                console.log(x)
                 var available= document.createElement('p')
                 available.innerHTML= x.available
                 sectionDate.appendChild(available) 
