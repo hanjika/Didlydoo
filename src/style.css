@@ -1,36 +1,22 @@
-article {
-    margin: 30px;
-    margin-top: 50px;
-}
-.dates {
-    margin-left: 10vw;
-    text-align: center;
-    /* display: flex; */
-}
-.dates section {
-    display: flex;
-    flex-direction: column;
-}
-.guest {
-    display: flex;
-    gap : 30px;
-}
 body {
     font-family: sans-serif;
+    border: 1px ridge black;
 }
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.add-new-event {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
 section > p, .form-attend input{
     width: 10vw;
 }
 section > p:not(:first-child) {
     text-align: center;
-}
-.eventSection {
-    margin: 0 5vw;
 }
 .modal {
     display: none;
@@ -87,15 +73,6 @@ button, .delete-date {
 .delete-date{
     padding: 5px;
 }
-article {
-    margin: 30px;
-    margin-top: 50px;
-}
-.dates {
-    margin-left: 150px;
-    display: flex;
-    gap: 50px;
-}
 .form-attend {
     display: flex;
     flex-direction: row;
@@ -103,8 +80,8 @@ article {
 .radio-buttons {
     display: flex;
     justify-content: center;
-    width: 10vw;
-    margin: 0 2vw;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .radio-buttons label {
     display: inline-block;
@@ -119,4 +96,30 @@ article {
 .radio-buttons input[type="radio"]:checked + label {
     border: solid 2px blue;
     background-color: cornflowerblue;
+}
+.eventSection {
+    margin-left: 50px;
+}
+.dates {
+    text-align: center;
+    display: flex;
+}
+.dates section {
+    display: flex;
+    flex-direction: column;
+}
+.dates section p {
+    margin: 0px;
+    border: 1px ridge black;
+    height: 25px;
+    text-align: center;
+}
+.guest {
+    display: flex;
+}
+.true {
+    color: green;
+}
+.false {
+    color:red;
 }

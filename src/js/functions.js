@@ -11,13 +11,10 @@ closeModalBtn.addEventListener('click', () => {
     newEventModal.style.display = 'none';
     removeAdditionalDates();
 });
-
 const addDateBtn = document.querySelector('.add-new-date-button');
 addDateBtn.addEventListener('click', addAdditionalDate);
-
 const submitFormBtn = document.querySelector('.submit-form');
 submitFormBtn.addEventListener('click', addEvent);
-
 function addAdditionalDate() {
     const parentDiv = document.querySelector('.event-dates');
 
@@ -39,14 +36,12 @@ function addAdditionalDate() {
     addDiv.appendChild(deleteSpan);
     parentDiv.appendChild(addDiv);
 }
-
 function removeAdditionalDates() {
     const allAddDates = document.querySelectorAll('.additional-date');
     for (const date of allAddDates) {
         document.querySelector('.event-dates').removeChild(date);
     }
 }
-
 function addEvent() {
     const form = document.querySelector('.event-form');
 
