@@ -119,3 +119,58 @@ function attendanceAdd(e) {
       body: JSON.stringify(formData)
     });
 }
+
+/*** EDIT EVENT ***/
+
+function editEvent(e) {
+    console.log(e.target);
+    e.target.innerText = 'Finish edit';
+    const id = e.target.id;
+    let article;
+
+    const allArticles = document.querySelectorAll('article');
+    for (const anArticle of allArticles) {
+        if (anArticle.id === id) {
+            article = anArticle;
+        }
+    }
+    console.log(article);
+
+    const getNewTitle = document.createElement('input');
+    getNewTitle.setAttribute('type', 'text');
+    getNewTitle.setAttribute('placeholder', 'Name of event');
+
+    const getNewDes = document.createElement('input');
+    getNewDes.setAttribute('type', 'text');
+    getNewDes.setAttribute('placeholder', 'Description');
+
+    const getNewAuthor = document.createElement('input');
+    getNewAuthor.setAttribute('type', 'text');
+    getNewAuthor.setAttribute('placeholder', 'Your name');
+
+
+    article.querySelector('.title').replaceWith(getNewTitle);
+    article.querySelector('.description').replaceWith(getNewDes);
+    article.querySelector('.author').replaceWith(getNewAuthor);
+
+    e.target.removeEventListener('click', editEvent);
+    e.target.addEventListener('click', finishEdit);
+}
+
+function finishEdit(e) {
+    e.target.innerText = 'Edit event';
+
+    e.target.removeEventListener('click', finishEdit);
+    e.target.addEventListener('click', editEvent);
+}
+
+/*** DELETE EVENT ***/
+
+function deleteEvent(e) {
+    console.log(e.target);
+    const id = e.target.id;
+
+    fetch('http://localhost:3000/api/events/' + id, {
+      method: 'DELETE'
+    });
+}

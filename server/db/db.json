@@ -1,44 +1,5 @@
 [
   {
-    "id": "497e0ad80f5b",
-    "name": "Test",
-    "author": "moi",
-    "description": "test",
-    "dates": [
-      "2021-03-03"
-    ],
-    "created_at": "2021-11-17T15:15:31.512Z",
-    "num_modification": 0,
-    "last_modification": "2021-11-17T15:15:31.512Z",
-    "attendees": []
-  },
-  {
-    "id": "c2545c8ad829",
-    "name": "Test",
-    "author": "moi",
-    "description": "test",
-    "dates": [
-      "2021-03-03"
-    ],
-    "created_at": "2021-11-17T15:15:16.592Z",
-    "num_modification": 0,
-    "last_modification": "2021-11-17T15:15:16.592Z",
-    "attendees": []
-  },
-  {
-    "id": "211e2550649a",
-    "name": "Test",
-    "author": "moi",
-    "description": "test",
-    "dates": [
-      "0888-03-03"
-    ],
-    "created_at": "2021-11-17T15:15:08.237Z",
-    "num_modification": 0,
-    "last_modification": "2021-11-17T15:15:08.237Z",
-    "attendees": []
-  },
-  {
     "id": "2cdfb267273a",
     "name": "party",
     "author": "Hanna",
@@ -50,7 +11,47 @@
     "created_at": "2021-11-17T12:28:47.616Z",
     "num_modification": 0,
     "last_modification": "2021-11-17T12:28:47.616Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Bob",
+        "dates": [
+          {
+            "date": "2021-11-19",
+            "available": false
+          },
+          {
+            "date": "2021-11-23",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "David",
+        "dates": [
+          {
+            "date": "2021-11-19",
+            "available": true
+          },
+          {
+            "date": "2021-11-23",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Emma",
+        "dates": [
+          {
+            "date": "2021-11-19",
+            "available": false
+          },
+          {
+            "date": "2021-11-23",
+            "available": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "e8bee974667c",
