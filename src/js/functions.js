@@ -5,7 +5,6 @@ addEventBtn.addEventListener('click', () => {
     const newEventModal = document.querySelector('.modal');
     newEventModal.style.display = 'flex';
 });
-
 const closeModalBtn = document.querySelector('.leave-modal');
 closeModalBtn.addEventListener('click', () => {
     const newEventModal = document.querySelector('.modal');

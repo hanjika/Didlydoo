@@ -3,8 +3,9 @@ article {
     margin-top: 50px;
 }
 .dates {
-    display: flex;
+    margin-left: 10vw;
     text-align: center;
+    /* display: flex; */
 }
 .dates section {
     display: flex;
@@ -17,34 +18,20 @@ article {
 body {
     font-family: sans-serif;
 }
-
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.event-title {
-    display: flex;
-    justify-content: space-between;
+section > p, .form-attend input{
+    width: 10vw;
 }
-
-
-section > p, .form-attend > *, .radio-buttons {
-    width: 15vw;
-    height: 5vh;
+section > p:not(:first-child) {
+    text-align: center;
 }
-
-section > p, .form-attend > *{
-    margin: 0;
-    padding: 0;
-    /* border: solid 1px black; */
-}
-
 .eventSection {
     margin: 0 5vw;
 }
-
 .modal {
     display: none;
     justify-content: center;
@@ -58,30 +45,25 @@ section > p, .form-attend > *{
     overflow: auto;
     background-color: rgba(95, 95, 95, 0.7);
 }
-
 .create-event {
     width: 50vw;
     height: auto;
     margin-bottom: 10%;
     background-color: white;
 }
-
 .create-event, .event-form, .event-dates {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .event-form, .event-dates {
     justify-content: center;
 }
-
 .close-button-container {
     width: 50vw;
     display: flex;
     justify-content: flex-end;
 }
-
 button.leave-modal {
     position: fixed;
     border: none;
@@ -90,64 +72,51 @@ button.leave-modal {
     padding: 0 20px;
     font-size: 30px;
 }
-
 .create-event button {
     margin: 2vh 0;
 }
-
 .event-form input {
     margin-bottom: 2vh;
 }
-
 .event-form {
     margin-top: 5vh;
 }
-
-button, .delete-date, .radio-buttons label {
+button, .delete-date {
     cursor: pointer;
 }
-
 .delete-date{
     padding: 5px;
 }
-
+article {
+    margin: 30px;
+    margin-top: 50px;
+}
+.dates {
+    margin-left: 150px;
+    display: flex;
+    gap: 50px;
+}
 .form-attend {
     display: flex;
     flex-direction: row;
 }
-
-form.form-attend > * {
-    margin: 0;
-}
-
 .radio-buttons {
     display: flex;
     justify-content: center;
+    width: 10vw;
+    margin: 0 2vw;
 }
-
 .radio-buttons label {
-    background-color: cornflowerblue;;
-    margin: 0 5px;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    padding: 5px;
+    border: solid 2px #ccc;
     transition: all 0.3s;
 }
-
-.radio-buttons label:hover {
-    background-color: black;
-    color: white;
-}
-
 .radio-buttons input[type="radio"] {
     display: none;
 }
-
-.radio-buttons input[value="yes"]:checked + label {
-    background-color: palegreen;
-}
-
-.radio-buttons input[value="no"]:checked + label {
-    background-color: palevioletred;
+.radio-buttons input[type="radio"]:checked + label {
+    border: solid 2px blue;
+    background-color: cornflowerblue;
 }
