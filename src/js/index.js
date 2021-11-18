@@ -26,18 +26,18 @@ addDateBtn.addEventListener('click', addAdditionalDate);
 const submitFormBtn = document.querySelector('.submit-form');
 submitFormBtn.addEventListener('click', addEvent);
 
-const main= document.querySelector('main')
-const eventSection= document.querySelector('.eventSection')
-const inputEvent= document.querySelector('.events')
-const inputGuest= document.querySelector('.guests')
+const main = document.querySelector('main');
+const eventSection = document.querySelector('.eventSection');
+const inputEvent = document.querySelector('.events');
+const inputGuest = document.querySelector('.guests');
 
 fetch("http://localhost:3000/api/events/")
 .then(response => response.json())
 .then(json => {
     for (const event of json) {
-        var article= document.createElement('article')
-        article.setAttribute('id', event.id)
-        eventSection.appendChild(article)
+        var article= document.createElement('article');
+        article.setAttribute('id', event.id);
+        eventSection.appendChild(article);
 
         var header = document.createElement('div');
         header.setAttribute('class', 'event-title');
@@ -47,13 +47,13 @@ fetch("http://localhost:3000/api/events/")
         name.innerHTML= event.name;
 
         var editEventBtn = document.createElement('button');
-        editEventBtn.innerText = 'Edit event'
+        editEventBtn.innerText = 'Edit event';
         editEventBtn.classList.add('edit-event-button');
         editEventBtn.setAttribute('id', event.id);
         editEventBtn.addEventListener('click', editEvent);
 
         var deleteEventBtn = document.createElement('button');
-        deleteEventBtn.innerText = 'Delete event'
+        deleteEventBtn.innerText = 'Delete event';
         deleteEventBtn.classList.add('delete-event-button');
         deleteEventBtn.setAttribute('id', event.id);
         deleteEventBtn.addEventListener('click', deleteEvent);
@@ -74,42 +74,43 @@ fetch("http://localhost:3000/api/events/")
         article.appendChild(author);
 
         //dates
-        var section= document.createElement('section')
-        section.setAttribute('class', 'dates')
-        article.appendChild(section) 
+        var section= document.createElement('section');
+        section.setAttribute('class', 'dates');
+        article.appendChild(section);
 
-        var guestList= document.createElement('section')
-        guestList.setAttribute('class', 'guests')
-        section.appendChild(guestList)
+        var guestList= document.createElement('section');
+        guestList.setAttribute('class', 'guests');
+        section.appendChild(guestList);
 
         var emptyP = document.createElement('p');
         guestList.appendChild(emptyP);
         for (const names of event.dates[0].attendees) {
             //name of guests
-            var guest= document.createElement('p')
-            guest.innerHTML= names.name
-            guestList.appendChild(guest)
+            var guest= document.createElement('p');
+            guest.innerHTML= names.name;
+            guestList.appendChild(guest);
         }
 
         for (const date of event.dates) {
-            const sectionDate= document.createElement('section')
-            sectionDate.setAttribute('class', 'date-info')
-            section.appendChild(sectionDate)
-            var possibleDate= document.createElement('p')
-            possibleDate.innerHTML= new Date(date.date).toLocaleDateString()
-            sectionDate.appendChild(possibleDate) 
+            const sectionDate= document.createElement('section');
+            sectionDate.setAttribute('class', 'date-info');
+            section.appendChild(sectionDate);
+
+            var possibleDate= document.createElement('p');
+            possibleDate.innerHTML= new Date(date.date).toLocaleDateString();
+            sectionDate.appendChild(possibleDate);
 
             for (const x of date.attendees) {
-                var available= document.createElement('p')
+                var available= document.createElement('p');
                 if (x.available == true) {
-                    available.innerHTML = "V"
-                    available.classList.add('true')
+                    available.innerHTML = "V";
+                    available.classList.add('true');
                 }
                 if (x.available == false) {
-                    available.innerHTML= "X"
-                    available.classList.add("false")
+                    available.innerHTML= "X";
+                    available.classList.add("false");
                 }
-                sectionDate.appendChild(available) 
+                sectionDate.appendChild(available);
             }   
         }
 
@@ -167,8 +168,8 @@ fetch("http://localhost:3000/api/events/")
 
         article.appendChild(attendanceForm);
         attendanceForm.appendChild(addAttendance);
-}
-})
+    }
+});
 
 
 
