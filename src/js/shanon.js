@@ -65,9 +65,10 @@ fetch("http://localhost:3000/api/events/")
 
         for (const date of event.dates) {
             const sectionDate= document.createElement('section')
+            sectionDate.setAttribute('class', 'date-info')
             section.appendChild(sectionDate)
             var possibleDate= document.createElement('p')
-            possibleDate.innerHTML= date.date
+            possibleDate.innerHTML= new Date(date.date).toLocaleDateString()
             sectionDate.appendChild(possibleDate) 
 
             for (const x of date.attendees) {
@@ -130,13 +131,14 @@ fetch("http://localhost:3000/api/events/")
         }
 
         const addAttendance = document.createElement('button');
-        addAttendance.innerText = 'Add';
+        addAttendance.innerText = '+';
         addAttendance.classList.add('attendance-button');
         addAttendance.setAttribute('id', event.id);
         addAttendance.addEventListener('click', attendanceAdd);
 
-        attendanceForm.appendChild(addAttendance);
+
         article.appendChild(attendanceForm);
+        attendanceForm.appendChild(addAttendance);
 }
 })
 

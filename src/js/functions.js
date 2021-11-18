@@ -118,11 +118,10 @@ function attendanceAdd(e) {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData)
-    }).then(response => response.json())
+    })
+    .then(response => response.json())
     .then(result => {
-        if (result[0].type === 'string.empty') {
-            alert('All input fields must be completed to add an attendance');
-        }
+        alert(result[0].message);
     })
     .catch(error => {
         console.error('Error:', error);
