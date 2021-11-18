@@ -1,3 +1,5 @@
+import { date } from "joi";
+
 export function addEvent() {
     const form = document.querySelector('.event-form');
 
@@ -47,7 +49,7 @@ export function addAdditionalDate() {
     const deleteSpan = document.createElement('span');
     deleteSpan.classList.add('delete-date');
     deleteSpan.addEventListener('click', () => {
-        dateDiv = deleteSpan.parentNode;
+        const dateDiv = deleteSpan.parentNode;
         document.querySelector('.event-dates').removeChild(dateDiv);
     });
     deleteSpan.innerText = '×';
