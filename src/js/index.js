@@ -1,5 +1,5 @@
 import { 
-    removeAdditionalDate,
+    removeAdditionalDates,
     addAdditionalDate,
     addEvent
 } from "./addEvent";
