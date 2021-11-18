@@ -27,6 +27,7 @@ article {
 }
 body {
     font-family: sans-serif;
+    border: 1px ridge black;
 }
 
 header {
@@ -186,3 +187,35 @@ form.form-attend > * {
 .radio-buttons input[value="no"]:checked + label {
     background-color: red;
 }
+
+.add-new-event {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+
+.eventSection {
+    margin-left: 50px;
+}
+.dates {
+    text-align: center;
+    display: flex;
+}
+.dates section {
+    display: flex;
+    flex-direction: column;
+}
+.dates section p {
+    margin: 0px;
+    border: 1px ridge black;
+    height: 25px;
+    text-align: center;
+}
+.guest {
+    display: flex;
+}
+.true {
+    color: green;
+}
+.false {
+    color:red;
